@@ -1,2 +1,7 @@
-# lofi-video-generator
-This will generate a 3 minute lo-fi video from a gif and a youtube lofi music video
+# Lofi Video Generator
+
+Want to create a video from a gif file and an youtube music video, this generator is here for you. I will  generate a 3 minute long youtube video with your watermark.
+
+## Installation
+
+
