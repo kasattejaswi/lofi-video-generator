@@ -9,7 +9,7 @@ Currently it only supports linux and mac os as the script is written in shell. Y
 * Python 3.6 or greater
 * youtube-dl ( pip3 install --upgrade youtube-dl )
 * ffmpeg ( sudo apt install ffmpeg )
-* moviepy (pip3 intall moviepy)
+* moviepy (pip3 install moviepy)
 * imagemagick ( https://www.tecmint.com/install-imagemagick-on-debian-ubuntu/ )
 
 ## Installation
@@ -43,3 +43,14 @@ sh generateVideos.sh
 The process will take some time depending upon the size of youtube videos.
 
 After the process is completed, a python server will be started and will host a zip file which contains all the generated videos. You can type that IP with port 8000 in your mobile if you are on the same wifi network. A webpage will open and download the zip. After dowmloading, extract in your phone and post it on insta, fb wherever you like.
+
+## Modifying values
+
+In order to change video length and watermark details, edit lofiVideoCreator.py and replace
+```
+totalTime = 180 # Time in seconds ~3mins
+watermark = "CHILL_MUSIC_ADDICTION"
+```
+with your details.
+
+
