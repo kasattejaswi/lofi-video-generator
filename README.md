@@ -49,7 +49,7 @@ After the process is completed, a python server will be started and will host a 
 In order to change video length and watermark details, edit lofiVideoCreator.py and replace
 ```
 totalTime = 180 # Time in seconds ~3mins
-watermark = "CHILL_MUSIC_ADDICTION"
+watermark = "YOUR_WATERMARK"
 ```
 with your details.
 
