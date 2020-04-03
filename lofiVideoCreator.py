@@ -13,6 +13,7 @@ videosPath = "generatedVideos"
 gifsPath = "downloadedGifs"
 audioPath = "downloadedMusic"
 totalTime = 180 # Time in seconds ~3mins
+watermark = "CHILL_MUSIC_ADDICTION"
 
 gifNames = os.listdir(gifsPath)
 audioNames = os.listdir(audioPath)
@@ -30,10 +31,10 @@ for itr in range(0,len(gifNames)):
         # Setting to Video
         videoClip = videoClip.fx(vfx.loop, n=numOfLoops)    
         audioClip = mp.AudioFileClip(audioClipPath)
-        txt_clip = mp.TextClip("chill_music_addiction",fontsize=15,font='DejaVu-Sans-Bold',color='white', bg_color='black')
-        txt_clip = txt_clip.set_position(("left","bottom")).set_duration(videoClip.duration)
+        txt_clip = mp.TextClip(watermark,fontsize=20,font='DejaVu-Sans-Bold',color='white')
+        txt_clip = txt_clip.set_position(("bottom")).set_duration(videoClip.duration)
         final = mp.CompositeVideoClip([videoClip,txt_clip])
         final.audio = audioClip
-        final.write_videofile(videosPath+"/"+gifNames[itr]+".mp4",codec = "libx264", fps=30, audio=True, audio_codec='aac')
+        final.write_videofile(videosPath+"/"+gifNames[itr]+".mp4",codec = "libx264", fps=25, audio=True, audio_codec='aac')
     except:
         print("***************Some error occurred**********************")
